@@ -1,0 +1,17 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore build artifacts from PyInstaller
+build/
+*.spec
+
+# Ignore merged output files
+*.xlsx
+
+# Ignore logs or temp files
+*.log
+
+ms-playwright/*
