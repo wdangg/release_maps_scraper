@@ -14,4 +14,4 @@ build/
 # Ignore logs or temp files
 *.log
 
-ms-playwright/*
+# ms-playwright/*

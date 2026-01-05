@@ -4,29 +4,36 @@
 Nhấn **Code** và chọn **Download ZIP**  
 ![Tải về ZIP](./img/howtodownload.png "Tải về ZIP")
 
-## 📂 Cấu trúc thư mục và chức năng các file
+# ▶️ Hướng dẫn chạy
 
-### ⚙️ 1. `crawl.exe`
-- Chạy file crawl để bot tự động cào dữ liệu theo từng **key search**.
-- Cách dùng: sửa nội dung trong `input.txt` → chạy `crawl.exe`, rồi lại sửa key khác ytpng `input.txt` rồi lại chạy `crawl.exe` cho đến khi đủ số lượng key mong muốn.  
+## ⚠️ Lưu ý
+- **Kết nối mạng:** Nên dùng **mạng LAN** để bảo đảm kết nối internet ổn định và tốc độ cao nhất.  
+- **Xóa dữ liệu cũ:** Trước khi chạy một nhóm key mới, hãy xóa:
+  - Các file `.xlsx` trong thư mục hiện tại  
+  - Các file `.csv` trong thư mục `output/`  
+  → tránh việc kết quả cũ bị gộp lại.  
+- **Quy trình chạy:**  
+  - Sửa nội dung trong `input.txt`  (1-2 key)
+  - Chạy `launch.bat`  
+  - Sửa key khác trong `input.txt`  (1-2 key)
+  - Chạy lại `launch.bat`  
+  → Lặp lại cho đến khi đủ số lượng key mong muốn.  
+- **Phạm vi key:** Nên chọn key có phạm vi nhỏ để kết quả sát hơn.  
+  - Ví dụ: `"sân bóng ở hà nội"` thay vì `"sân bóng ở Việt Nam"`.  
+- **Số lượng key:** Chỉ nên chạy **1–2 key mỗi lần**.  
+  - Nếu chạy quá nhiều key cùng lúc dễ gây treo máy hoặc tràn RAM.  
+  - Google Maps có thể render lại, dẫn đến thiếu hoặc gián đoạn dữ liệu.  
+  - Nên khoanh vùng tìm kiếm (tỉnh, huyện) để chạy mượt mà và giảm rủi ro mất data.  
+- **Giới hạn kết quả:** Theo quan sát, Google Maps nếu key quá chung (ví dụ: `"sân bóng ở Việt Nam"`) thì số kết quả trả về thường **không vượt quá 150**.  
+  → Tìm theo phạm vi nhỏ sẽ hiệu quả hơn.
 
-**📌 Lưu ý:**
-- Nên chọn các key có phạm vi nhỏ để kết quả sát hơn.  
-  Ví dụ: `"sân bóng ở hà nội"` thay vì `"sân bóng ở Việt Nam"`.  
-- Chỉ nên chạy 1–2 key mỗi lần. Sau khi xong thì sửa lại file `input.txt` rồi chạy tiếp.  
-- Nếu chạy quá nhiều key cùng lúc dễ gây treo máy hoặc tràn RAM. Cũng có thể Gg maps sẽ render lại dẫn đến lấy data thiếu hoặc bị gián đoạn, nên khoanh vùng cần tìm kiếm để chạy mượt mà và rủi ro mất data.
+---
 
-### 🧮 2. `merge.exe`
-- Sau khi đã chạy đủ các key, chạy `merge.exe` để tổng hợp kết quả tìm kiếm từ nhiều lần crawl.  
+## 📌 Các bước thực hiện
+1. **Sửa key search** trong file `input.txt`.  
+2. **Chạy `launch.bat` với quyền ADMIN.**  
 
 ---
 
-## ▶️ Cách chạy
-
-⚠️ **Lưu ý:** Trước khi chạy một nhóm key mới, hãy xóa các file `.xlsx` trong thư mục hiện tại và các file `.csv` trong thư mục `output/` để tránh kết quả cũ bị gộp lại.  
-
-1. **📝 Bước 1:** Sửa key search trong `input.txt`, sau đó chạy `crawl.exe`.  
-2. **📊 Bước 2:** Chạy `merge.exe`.  
-   - Kết quả sẽ là một file tổng hợp dữ liệu, mặc định tên là **`merged_output.xlsx`**.  
-
----
+## 📊 Kết quả
+- File tổng hợp dữ liệu mặc định sẽ có tên: **`merged_output.xlsx`**
