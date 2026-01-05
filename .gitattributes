@@ -1,0 +1,9 @@
+# Track Chromium binary bằng Git LFS
+ms-playwright/chromium-1200/** filter=lfs diff=lfs merge=lfs -text
+
+# Nếu sau này muốn track thêm Firefox/WebKit thì mở comment:
+# ms-playwright/firefox-1497/** filter=lfs diff=lfs merge=lfs -text
+# ms-playwright/webkit-2227/** filter=lfs diff=lfs merge=lfs -text
+
+# Nếu muốn track cả ffmpeg (video recording):
+# ms-playwright/ffmpeg-1011/** filter=lfs diff=lfs merge=lfs -text
